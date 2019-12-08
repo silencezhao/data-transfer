@@ -15,6 +15,7 @@
         <module>common</module>
         <module>webapi</module>
         <module>rpcdemo</module>
+        <module>test</module>
     </modules>
 
     <name>core</name>
@@ -122,9 +123,31 @@
                 <version>9.4.23.v20191118</version>
             </dependency>
             <dependency>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-util</artifactId>
+                <version>9.4.23.v20191118</version>
+            </dependency>
+            <dependency>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-io</artifactId>
+                <version>9.4.23.v20191118</version>
+            </dependency>
+            <dependency>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-distribution</artifactId>
+                <version>9.4.23.v20191118</version>
+                <type>pom</type>
+            </dependency>
+
+            <dependency>
                 <groupId>org.apache.dubbo</groupId>
                 <artifactId>dubbo</artifactId>
                 <version>2.7.4.1</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.servlet</groupId>
+                <artifactId>javax.servlet-api</artifactId>
+                <version>4.0.1</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
