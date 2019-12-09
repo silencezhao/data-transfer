@@ -10,6 +10,8 @@
     <!-- 使用multicast广播注册中心暴露发现服务地址 -->
     <dubbo:registry id="registry" protocol="zookeeper" address="localhost:2181" client="curator" group="heng" username="heng" password="heng"/>
 
+    <dubbo:consumer timeout="8640000000"/>
+
     <!-- 生成远程服务代理，可以和本地bean一样使用demoService -->
     <dubbo:reference id="demoService" interface="com.datatransfer.rpcdemo.service.DemoService"/>
 </beans>

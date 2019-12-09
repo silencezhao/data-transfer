@@ -1,6 +1,7 @@
 package com.datatransfer.rpcdemo;
 
 
+import org.apache.dubbo.container.Main;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class DemoMain {
@@ -10,5 +11,6 @@ public class DemoMain {
         context.refresh();
         context.start();
         System.in.read();
+
     }
 }
