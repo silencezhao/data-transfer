@@ -1,0 +1,202 @@
+[
+  {
+    "id":1,
+    "name":"oracle11g_30_90",
+    "interval":300,
+    "defaultOffsetValue": "2019-10-10 00:00:00.000000",
+    "tableName":"AUD",
+    "processes":"[{\"config\":{\"url\":\"locahost\"},\"type\":1}]",
+    "outputs":"[{\"config\":{\"hive.driver\":\"org.apache.hive.jdbc.HiveDriver\",\"hive.url\":\"jdbc:hive2://10.172.30.5:10000/nsfocus;auth=noSasl;\",\"hive.user\":\"espcpostgres\",\"hive.password\":\"\"},\"type\":1}]",
+    "input":"{\"config\":{\"jdbc.url\":\"jdbc:oracle:thin:@//10.172.30.90/orcl\",\"jdbc.username\":\"AUD_USER\",\"jdbc.password\":\"Orcl#SJ20190724\",\"jdbc.driver\":\"oracle.jdbc.driver.OracleDriver\",\"sql\":\"select * from (select * from SYS.AUD$ where NTIMESTAMP# > TO_TIMESTAMP(?,'yyyy-MM-dd HH24:MI:ss.ff') order by NTIMESTAMP# ASC)  AUD where  rownum<=3000  \"},\"type\":1}"
+  },
+  {
+    "id":2,
+    "name":"oracle11g_31_159",
+    "interval":300,
+    "defaultOffsetValue": "2019-10-10 00:00:00.000000",
+    "tableName":"AUD",
+    "processes":"[{\"config\":{\"url\":\"locahost\"},\"type\":1}]",
+    "outputs":"[{\"config\":{\"hive.driver\":\"org.apache.hive.jdbc.HiveDriver\",\"hive.url\":\"jdbc:hive2://10.172.30.5:10000/nsfocus;auth=noSasl;\",\"hive.user\":\"espcpostgres\",\"hive.password\":\"\"},\"type\":1}]",
+    "input":"{\"config\":{\"jdbc.url\":\"jdbc:oracle:thin:@//10.172.31.159:1521/orcl\",\"jdbc.username\":\"AUD_USER\",\"jdbc.password\":\"Orcl#SJ20190724\",\"jdbc.driver\":\"oracle.jdbc.driver.OracleDriver\",\"sql\":\"select * from (select * from SYS.AUD$ where NTIMESTAMP# > TO_TIMESTAMP(?,'yyyy-MM-dd HH24:MI:ss.ff') order by NTIMESTAMP# ASC)  AUD where  rownum<=3000  \"},\"type\":1}"
+  },
+  {
+    "id":3,
+    "name":"oracle11g_30_183",
+    "interval":300,
+    "defaultOffsetValue": "2019-10-10 00:00:00.000000",
+    "tableName":"AUD",
+    "processes":"[{\"config\":{\"url\":\"locahost\"},\"type\":1}]",
+    "outputs":"[{\"config\":{\"hive.driver\":\"org.apache.hive.jdbc.HiveDriver\",\"hive.url\":\"jdbc:hive2://10.172.30.5:10000/nsfocus;auth=noSasl;\",\"hive.user\":\"espcpostgres\",\"hive.password\":\"\"},\"type\":1}]",
+    "input":"{\"config\":{\"jdbc.url\":\"jdbc:oracle:thin:@//10.172.30.183:1521/orcl\",\"jdbc.username\":\"AUD_USER\",\"jdbc.password\":\"Test#213456\",\"jdbc.driver\":\"oracle.jdbc.driver.OracleDriver\",\"sql\":\"select * from (select * from SYS.AUD$ where NTIMESTAMP# > TO_TIMESTAMP(?,'yyyy-MM-dd HH24:MI:ss.ff') order by NTIMESTAMP# ASC)  AUD where  rownum<=3000  \"},\"type\":1}"
+  },
+  {
+    "id":4,
+    "name":"oracle11g_30_182",
+    "interval":300,
+    "defaultOffsetValue": "2019-10-10 00:00:00.000000",
+    "tableName":"AUD",
+    "processes":"[{\"config\":{\"url\":\"locahost\"},\"type\":1}]",
+    "outputs":"[{\"config\":{\"hive.driver\":\"org.apache.hive.jdbc.HiveDriver\",\"hive.url\":\"jdbc:hive2://10.172.30.5:10000/nsfocus;auth=noSasl;\",\"hive.user\":\"espcpostgres\",\"hive.password\":\"\"},\"type\":1}]",
+    "input":"{\"config\":{\"jdbc.url\":\"jdbc:oracle:thin:@//10.172.30.182:1521/orcl\",\"jdbc.username\":\"system\",\"jdbc.password\":\"Test#213456\",\"jdbc.driver\":\"oracle.jdbc.driver.OracleDriver\",\"sql\":\"select * from (select * from SYS.AUD$ where NTIMESTAMP# > TO_TIMESTAMP(?,'yyyy-MM-dd HH24:MI:ss.ff') order by NTIMESTAMP# ASC)  AUD where  rownum<=3000  \"},\"type\":1}"
+  },
+  {
+    "id":5,
+    "name":"oracle10g_30_109",
+    "interval":300,
+    "defaultOffsetValue": "2019-10-10 00:00:00.000000",
+    "tableName":"AUD",
+    "processes":"[{\"config\":{\"url\":\"locahost\"},\"type\":1}]",
+    "outputs":"[{\"config\":{\"hive.driver\":\"org.apache.hive.jdbc.HiveDriver\",\"hive.url\":\"jdbc:hive2://10.172.30.5:10000/nsfocus;auth=noSasl;\",\"hive.user\":\"espcpostgres\",\"hive.password\":\"\"},\"type\":1}]",
+    "input":"{\"config\":{\"jdbc.url\":\"jdbc:oracle:thin:@//10.172.30.109:1521/orcl\",\"jdbc.username\":\"AUD_USER\",\"jdbc.password\":\"orCL#20190902j\",\"jdbc.driver\":\"oracle.jdbc.driver.OracleDriver\",\"sql\":\"select * from (select * from SYS.AUD$ where NTIMESTAMP# > TO_TIMESTAMP(?,'yyyy-MM-dd HH24:MI:ss.ff') order by NTIMESTAMP# ASC)  AUD where  rownum<=3000  \"},\"type\":1}"
+  },
+  {
+    "id":6,
+    "name":"oracle11g_31_171",
+    "interval":300,
+    "defaultOffsetValue": "2019-10-10 00:00:00.000000",
+    "tableName":"AUD",
+    "processes":"[{\"config\":{\"url\":\"locahost\"},\"type\":1}]",
+    "outputs":"[{\"config\":{\"hive.driver\":\"org.apache.hive.jdbc.HiveDriver\",\"hive.url\":\"jdbc:hive2://10.172.30.5:10000/nsfocus;auth=noSasl;\",\"hive.user\":\"espcpostgres\",\"hive.password\":\"\"},\"type\":1}]",
+    "input":"{\"config\":{\"jdbc.url\":\"jdbc:oracle:thin:@//10.65.133.160:1521/orcl\",\"jdbc.username\":\"system\",\"jdbc.password\":\"nsfocus\",\"jdbc.driver\":\"oracle.jdbc.driver.OracleDriver\",\"sql\":\"select * from (select * from SYS.AUD$ where NTIMESTAMP# > TO_TIMESTAMP(?,'yyyy-MM-dd HH24:MI:ss.ff') order by NTIMESTAMP# ASC)  AUD where  rownum<=3000  \"},\"type\":1}"
+  },
+  {
+    "id":7,
+    "name":"oracle11g_31_100",
+    "interval":300,
+    "defaultOffsetValue": "2019-10-10 00:00:00.000000",
+    "tableName":"AUD",
+    "processes":"[{\"config\":{\"url\":\"locahost\"},\"type\":1}]",
+    "outputs":"[{\"config\":{\"hive.driver\":\"org.apache.hive.jdbc.HiveDriver\",\"hive.url\":\"jdbc:hive2://10.172.30.5:10000/nsfocus;auth=noSasl;\",\"hive.user\":\"espcpostgres\",\"hive.password\":\"\"},\"type\":1}]",
+    "input":"{\"config\":{\"jdbc.url\":\"jdbc:oracle:thin:@//10.65.133.160:1521/orcl\",\"jdbc.username\":\"system\",\"jdbc.password\":\"nsfocus\",\"jdbc.driver\":\"oracle.jdbc.driver.OracleDriver\",\"sql\":\"select * from (select * from SYS.AUD$ where NTIMESTAMP# > TO_TIMESTAMP(?,'yyyy-MM-dd HH24:MI:ss.ff') order by NTIMESTAMP# ASC)  AUD where  rownum<=3000  \"},\"type\":1}"
+  },
+  {
+    "id":8,
+    "name":"oracle11g_31_88",
+    "interval":300,
+    "defaultOffsetValue": "2019-10-10 00:00:00.000000",
+    "tableName":"AUD",
+    "processes":"[{\"config\":{\"url\":\"locahost\"},\"type\":1}]",
+    "outputs":"[{\"config\":{\"hive.driver\":\"org.apache.hive.jdbc.HiveDriver\",\"hive.url\":\"jdbc:hive2://10.172.30.5:10000/nsfocus;auth=noSasl;\",\"hive.user\":\"espcpostgres\",\"hive.password\":\"\"},\"type\":1}]",
+    "input":"{\"config\":{\"jdbc.url\":\"jdbc:oracle:thin:@//10.65.133.160:1521/orcl\",\"jdbc.username\":\"system\",\"jdbc.password\":\"nsfocus\",\"jdbc.driver\":\"oracle.jdbc.driver.OracleDriver\",\"sql\":\"select * from (select * from SYS.AUD$ where NTIMESTAMP# > TO_TIMESTAMP(?,'yyyy-MM-dd HH24:MI:ss.ff') order by NTIMESTAMP# ASC)  AUD where  rownum<=3000  \"},\"type\":1}"
+  },
+  {
+    "id":9,
+    "name":"oracle11g_31_50",
+    "interval":300,
+    "defaultOffsetValue": "2019-10-10 00:00:00.000000",
+    "tableName":"AUD",
+    "processes":"[{\"config\":{\"url\":\"locahost\"},\"type\":1}]",
+    "outputs":"[{\"config\":{\"hive.driver\":\"org.apache.hive.jdbc.HiveDriver\",\"hive.url\":\"jdbc:hive2://10.172.30.5:10000/nsfocus;auth=noSasl;\",\"hive.user\":\"espcpostgres\",\"hive.password\":\"\"},\"type\":1}]",
+    "input":"{\"config\":{\"jdbc.url\":\"jdbc:oracle:thin:@//10.65.133.160:1521/orcl\",\"jdbc.username\":\"system\",\"jdbc.password\":\"nsfocus\",\"jdbc.driver\":\"oracle.jdbc.driver.OracleDriver\",\"sql\":\"select * from (select * from SYS.AUD$ where NTIMESTAMP# > TO_TIMESTAMP(?,'yyyy-MM-dd HH24:MI:ss.ff') order by NTIMESTAMP# ASC)  AUD where  rownum<=3000  \"},\"type\":1}"
+  },
+  {
+    "id":10,
+    "name":"oracle11g_31_173",
+    "interval":300,
+    "defaultOffsetValue": "2019-10-10 00:00:00.000000",
+    "tableName":"AUD",
+    "processes":"[{\"config\":{\"url\":\"locahost\"},\"type\":1}]",
+    "outputs":"[{\"config\":{\"hive.driver\":\"org.apache.hive.jdbc.HiveDriver\",\"hive.url\":\"jdbc:hive2://10.172.30.5:10000/nsfocus;auth=noSasl;\",\"hive.user\":\"espcpostgres\",\"hive.password\":\"\"},\"type\":1}]",
+    "input":"{\"config\":{\"jdbc.url\":\"jdbc:oracle:thin:@//10.65.133.160:1521/orcl\",\"jdbc.username\":\"system\",\"jdbc.password\":\"nsfocus\",\"jdbc.driver\":\"oracle.jdbc.driver.OracleDriver\",\"sql\":\"select * from (select * from SYS.AUD$ where NTIMESTAMP# > TO_TIMESTAMP(?,'yyyy-MM-dd HH24:MI:ss.ff') order by NTIMESTAMP# ASC)  AUD where  rownum<=3000  \"},\"type\":1}"
+  },
+  {
+    "id":11,
+    "name":"oracle11g_31_141",
+    "interval":300,
+    "defaultOffsetValue": "2019-10-10 00:00:00.000000",
+    "tableName":"AUD",
+    "processes":"[{\"config\":{\"url\":\"locahost\"},\"type\":1}]",
+    "outputs":"[{\"config\":{\"hive.driver\":\"org.apache.hive.jdbc.HiveDriver\",\"hive.url\":\"jdbc:hive2://10.172.30.5:10000/nsfocus;auth=noSasl;\",\"hive.user\":\"espcpostgres\",\"hive.password\":\"\"},\"type\":1}]",
+    "input":"{\"config\":{\"jdbc.url\":\"jdbc:oracle:thin:@//10.65.133.160:1521/orcl\",\"jdbc.username\":\"system\",\"jdbc.password\":\"nsfocus\",\"jdbc.driver\":\"oracle.jdbc.driver.OracleDriver\",\"sql\":\"select * from (select * from SYS.AUD$ where NTIMESTAMP# > TO_TIMESTAMP(?,'yyyy-MM-dd HH24:MI:ss.ff') order by NTIMESTAMP# ASC)  AUD where  rownum<=3000  \"},\"type\":1}"
+  },
+  {
+    "id":12,
+    "name":"oracle11g_31_2",
+    "interval":300,
+    "defaultOffsetValue": "2019-10-10 00:00:00.000000",
+    "tableName":"AUD",
+    "processes":"[{\"config\":{\"url\":\"locahost\"},\"type\":1}]",
+    "outputs":"[{\"config\":{\"hive.driver\":\"org.apache.hive.jdbc.HiveDriver\",\"hive.url\":\"jdbc:hive2://10.172.30.5:10000/nsfocus;auth=noSasl;\",\"hive.user\":\"espcpostgres\",\"hive.password\":\"\"},\"type\":1}]",
+    "input":"{\"config\":{\"jdbc.url\":\"jdbc:oracle:thin:@//10.65.133.160:1521/orcl\",\"jdbc.username\":\"system\",\"jdbc.password\":\"nsfocus\",\"jdbc.driver\":\"oracle.jdbc.driver.OracleDriver\",\"sql\":\"select * from (select * from SYS.AUD$ where NTIMESTAMP# > TO_TIMESTAMP(?,'yyyy-MM-dd HH24:MI:ss.ff') order by NTIMESTAMP# ASC)  AUD where  rownum<=3000  \"},\"type\":1}"
+  },
+  {
+    "id":13,
+    "name":"oracle11g_31_103",
+    "interval":300,
+    "defaultOffsetValue": "2019-10-10 00:00:00.000000",
+    "tableName":"AUD",
+    "processes":"[{\"config\":{\"url\":\"locahost\"},\"type\":1}]",
+    "outputs":"[{\"config\":{\"hive.driver\":\"org.apache.hive.jdbc.HiveDriver\",\"hive.url\":\"jdbc:hive2://10.172.30.5:10000/nsfocus;auth=noSasl;\",\"hive.user\":\"espcpostgres\",\"hive.password\":\"\"},\"type\":1}]",
+    "input":"{\"config\":{\"jdbc.url\":\"jdbc:oracle:thin:@//10.65.133.160:1521/orcl\",\"jdbc.username\":\"system\",\"jdbc.password\":\"nsfocus\",\"jdbc.driver\":\"oracle.jdbc.driver.OracleDriver\",\"sql\":\"select * from (select * from SYS.AUD$ where NTIMESTAMP# > TO_TIMESTAMP(?,'yyyy-MM-dd HH24:MI:ss.ff') order by NTIMESTAMP# ASC)  AUD where  rownum<=3000  \"},\"type\":1}"
+  },
+  {
+    "id":14,
+    "name":"oracle10g_31_5",
+    "interval":300,
+    "defaultOffsetValue": "2019-10-10 00:00:00.000000",
+    "tableName":"AUD",
+    "processes":"[{\"config\":{\"url\":\"locahost\"},\"type\":1}]",
+    "outputs":"[{\"config\":{\"hive.driver\":\"org.apache.hive.jdbc.HiveDriver\",\"hive.url\":\"jdbc:hive2://10.172.30.5:10000/nsfocus;auth=noSasl;\",\"hive.user\":\"espcpostgres\",\"hive.password\":\"\"},\"type\":1}]",
+    "input":"{\"config\":{\"jdbc.url\":\"jdbc:oracle:thin:@//10.65.133.160:1521/orcl\",\"jdbc.username\":\"system\",\"jdbc.password\":\"nsfocus\",\"jdbc.driver\":\"oracle.jdbc.driver.OracleDriver\",\"sql\":\"select * from (select * from SYS.AUD$ where NTIMESTAMP# > TO_TIMESTAMP(?,'yyyy-MM-dd HH24:MI:ss.ff') order by NTIMESTAMP# ASC)  AUD where  rownum<=3000  \"},\"type\":1}"
+  },
+  {
+    "id":15,
+    "name":"oracle11g_31_102",
+    "interval":300,
+    "defaultOffsetValue": "2019-10-10 00:00:00.000000",
+    "tableName":"AUD",
+    "processes":"[{\"config\":{\"url\":\"locahost\"},\"type\":1}]",
+    "outputs":"[{\"config\":{\"hive.driver\":\"org.apache.hive.jdbc.HiveDriver\",\"hive.url\":\"jdbc:hive2://10.172.30.5:10000/nsfocus;auth=noSasl;\",\"hive.user\":\"espcpostgres\",\"hive.password\":\"\"},\"type\":1}]",
+    "input":"{\"config\":{\"jdbc.url\":\"jdbc:oracle:thin:@//10.65.133.160:1521/orcl\",\"jdbc.username\":\"system\",\"jdbc.password\":\"nsfocus\",\"jdbc.driver\":\"oracle.jdbc.driver.OracleDriver\",\"sql\":\"select * from (select * from SYS.AUD$ where NTIMESTAMP# > TO_TIMESTAMP(?,'yyyy-MM-dd HH24:MI:ss.ff') order by NTIMESTAMP# ASC)  AUD where  rownum<=3000  \"},\"type\":1}"
+  },
+  {
+    "id":16,
+    "name":"oracle11g_31_159",
+    "interval":300,
+    "defaultOffsetValue": "2019-10-10 00:00:00.000000",
+    "tableName":"AUD",
+    "processes":"[{\"config\":{\"url\":\"locahost\"},\"type\":1}]",
+    "outputs":"[{\"config\":{\"hive.driver\":\"org.apache.hive.jdbc.HiveDriver\",\"hive.url\":\"jdbc:hive2://10.172.30.5:10000/nsfocus;auth=noSasl;\",\"hive.user\":\"espcpostgres\",\"hive.password\":\"\"},\"type\":1}]",
+    "input":"{\"config\":{\"jdbc.url\":\"jdbc:oracle:thin:@//10.65.133.160:1521/orcl\",\"jdbc.username\":\"system\",\"jdbc.password\":\"nsfocus\",\"jdbc.driver\":\"oracle.jdbc.driver.OracleDriver\",\"sql\":\"select * from (select * from SYS.AUD$ where NTIMESTAMP# > TO_TIMESTAMP(?,'yyyy-MM-dd HH24:MI:ss.ff') order by NTIMESTAMP# ASC)  AUD where  rownum<=3000  \"},\"type\":1}"
+  },
+  {
+    "id":17,
+    "name":"oracle10g_30_17",
+    "interval":300,
+    "defaultOffsetValue": "2019-10-10 00:00:00.000000",
+    "tableName":"AUD",
+    "processes":"[{\"config\":{\"url\":\"locahost\"},\"type\":1}]",
+    "outputs":"[{\"config\":{\"hive.driver\":\"org.apache.hive.jdbc.HiveDriver\",\"hive.url\":\"jdbc:hive2://10.172.30.5:10000/nsfocus;auth=noSasl;\",\"hive.user\":\"espcpostgres\",\"hive.password\":\"\"},\"type\":1}]",
+    "input":"{\"config\":{\"jdbc.url\":\"jdbc:oracle:thin:@//10.65.133.160:1521/orcl\",\"jdbc.username\":\"system\",\"jdbc.password\":\"nsfocus\",\"jdbc.driver\":\"oracle.jdbc.driver.OracleDriver\",\"sql\":\"select * from (select * from SYS.AUD$ where NTIMESTAMP# > TO_TIMESTAMP(?,'yyyy-MM-dd HH24:MI:ss.ff') order by NTIMESTAMP# ASC)  AUD where  rownum<=3000  \"},\"type\":1}"
+  },
+  {
+    "id":18,
+    "name":"oracle11g_30_90",
+    "interval":300,
+    "defaultOffsetValue": "2019-10-10 00:00:00.000000",
+    "tableName":"AUD",
+    "processes":"[{\"config\":{\"url\":\"locahost\"},\"type\":1}]",
+    "outputs":"[{\"config\":{\"hive.driver\":\"org.apache.hive.jdbc.HiveDriver\",\"hive.url\":\"jdbc:hive2://10.172.30.5:10000/nsfocus;auth=noSasl;\",\"hive.user\":\"espcpostgres\",\"hive.password\":\"\"},\"type\":1}]",
+    "input":"{\"config\":{\"jdbc.url\":\"jdbc:oracle:thin:@//10.65.133.160:1521/orcl\",\"jdbc.username\":\"system\",\"jdbc.password\":\"nsfocus\",\"jdbc.driver\":\"oracle.jdbc.driver.OracleDriver\",\"sql\":\"select * from (select * from SYS.AUD$ where NTIMESTAMP# > TO_TIMESTAMP(?,'yyyy-MM-dd HH24:MI:ss.ff') order by NTIMESTAMP# ASC)  AUD where  rownum<=3000  \"},\"type\":1}"
+  },
+  {
+    "id":19,
+    "name":"oracle11g_30_163",
+    "interval":300,
+    "defaultOffsetValue": "2019-10-10 00:00:00.000000",
+    "tableName":"AUD",
+    "processes":"[{\"config\":{\"url\":\"locahost\"},\"type\":1}]",
+    "outputs":"[{\"config\":{\"hive.driver\":\"org.apache.hive.jdbc.HiveDriver\",\"hive.url\":\"jdbc:hive2://10.172.30.5:10000/nsfocus;auth=noSasl;\",\"hive.user\":\"espcpostgres\",\"hive.password\":\"\"},\"type\":1}]",
+    "input":"{\"config\":{\"jdbc.url\":\"jdbc:oracle:thin:@//10.65.133.160:1521/orcl\",\"jdbc.username\":\"system\",\"jdbc.password\":\"nsfocus\",\"jdbc.driver\":\"oracle.jdbc.driver.OracleDriver\",\"sql\":\"select * from (select * from SYS.AUD$ where NTIMESTAMP# > TO_TIMESTAMP(?,'yyyy-MM-dd HH24:MI:ss.ff') order by NTIMESTAMP# ASC)  AUD where  rownum<=3000  \"},\"type\":1}"
+  },
+  {
+    "id":20,
+    "name":"oracle10g_30_107",
+    "interval":300,
+    "defaultOffsetValue": "2019-10-10 00:00:00.000000",
+    "tableName":"AUD",
+    "processes":"[{\"config\":{\"url\":\"locahost\"},\"type\":1}]",
+    "outputs":"[{\"config\":{\"hive.driver\":\"org.apache.hive.jdbc.HiveDriver\",\"hive.url\":\"jdbc:hive2://10.172.30.5:10000/nsfocus;auth=noSasl;\",\"hive.user\":\"espcpostgres\",\"hive.password\":\"\"},\"type\":1}]",
+    "input":"{\"config\":{\"jdbc.url\":\"jdbc:oracle:thin:@//10.65.133.160:1521/orcl\",\"jdbc.username\":\"system\",\"jdbc.password\":\"nsfocus\",\"jdbc.driver\":\"oracle.jdbc.driver.OracleDriver\",\"sql\":\"select * from (select * from SYS.AUD$ where NTIMESTAMP# > TO_TIMESTAMP(?,'yyyy-MM-dd HH24:MI:ss.ff') order by NTIMESTAMP# ASC)  AUD where  rownum<=3000  \"},\"type\":1}"
+  }
+]

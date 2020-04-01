@@ -22,12 +22,94 @@
     </properties>
 
     <dependencies>
+        <!--日志-->
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.11</version>
-            <scope>test</scope>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
         </dependency>
+        <!-- log4j1到slf4j的桥梁 -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>log4j-over-slf4j</artifactId>
+        </dependency>
+        <!-- commons-log到slf4j的桥梁 -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>jcl-over-slf4j</artifactId>
+        </dependency>
+        <!-- jdk-utils-log到slf4j的桥梁 -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>jul-to-slf4j</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+        </dependency>
+        <!-- 桥接:告诉Slf4j使用Log4j2 -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-slf4j-impl</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.jaxrs</groupId>
+            <artifactId>jackson-jaxrs-json-provider</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.jaxrs</groupId>
+            <artifactId>jackson-jaxrs-base</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.datatransfer</groupId>
+            <artifactId>datatransfer-common-exception</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.datatransfer</groupId>
+            <artifactId>datatransfer-plugins-input</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.datatransfer</groupId>
+            <artifactId>datatransfer-plugins-procecssor</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.datatransfer</groupId>
+            <artifactId>datatransfer-plugins-sink</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.datatransfer</groupId>
+            <artifactId>datatransfer-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.datatransfer</groupId>
+            <artifactId>datatransfer-utils</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>net.sf.json-lib</groupId>
+            <artifactId>json-lib</artifactId>
+        </dependency>
+
     </dependencies>
 
     <build>

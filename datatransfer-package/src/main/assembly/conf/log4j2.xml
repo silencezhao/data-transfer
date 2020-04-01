@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--设置log4j2的自身log级别为info-->
+<configuration status="DEBUG" monitorInterval="10">
+    <appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} %p [%t] (%C.%M:%L) - %m%n" />
+        </Console>
+        <!--临时日志打印信息，这个log每次运行程序会自动清空，由append属性决定，适合临时测试用-->
+        <File name="TmpLog" fileName="/opt/nsfocus/espc/data-transfer/log/data_transfer_tmp.log" append="false">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} %p [%t] (%C.%M:%L) - %m%n"/>
+        </File>
+        <RollingFile name="RollingFileInfo" fileName="/opt/nsfocus/espc/data-transfer/log/data_transfer.log" filePattern="/opt/nsfocus/espc/data-transfer/log/$${date:yyyy-MM-dd}/data_transfer-%d{yyyy-MM-dd}-%i.log.gz">
+            <Filters>
+                <ThresholdFilter level="INFO" onMatch="ACCEPT" onMismatch="DENY"/>
+            </Filters>
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} %p [%t] (%C.%M:%L) - %m%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy/>
+                <SizeBasedTriggeringPolicy size="100 MB"/>
+            </Policies>
+            <!-- DefaultRolloverStrategy属性如不设置，则默认为最多同一文件夹下7个文件，这里设置了20 -->
+            <DefaultRolloverStrategy max="20"/>
+        </RollingFile>
+        <RollingFile name="RollingFileError" fileName="/opt/nsfocus/espc/data-transfer/log/data_transfer_error.log" filePattern="/opt/nsfocus/espc/data-transfer/log/$${date:yyyy-MM-dd}/data_transfer_error-%d{yyyy-MM-dd}-%i.log.gz">
+            <Filters>
+                <ThresholdFilter level="ERROR" onMatch="ACCEPT" onMismatch="DENY"/>
+            </Filters>
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} %p [%t] (%C.%M:%L) - %m%n"/>
+            <Policies>
+                <TimeBasedTriggeringPolicy/>
+                <SizeBasedTriggeringPolicy size="100 MB"/>
+            </Policies>
+            <!-- DefaultRolloverStrategy属性如不设置，则默认为最多同一文件夹下7个文件，这里设置了20 -->
+            <DefaultRolloverStrategy max="20"/>
+        </RollingFile>
+    </appenders>
+    <loggers>
+        <!--过滤特定日志信息-->
+		<!--
+		<Logger name="com.nsfocus.service" level="DEBUG" additivity="false">
+            <AppenderRef ref="TmpLog"/>
+        </Logger>
+		-->
+        <!--过滤掉无用信息-->
+        <root level="ALL">
+            <appender-ref ref="RollingFileInfo"/>
+            <appender-ref ref="RollingFileError"/>
+            <appender-ref ref="Console"/>
+        </root>
+    </loggers>
+</configuration>
