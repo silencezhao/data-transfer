@@ -4,8 +4,7 @@ import com.datatransfer.api.transfer.enumer.InputClassType;
 import com.datatransfer.api.transfer.enumer.OutputClassType;
 import com.datatransfer.api.transfer.enumer.ProcessClassType;
 import com.datatransfer.utils.JsonUtil;
-import net.sf.json.JSONObject;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -50,8 +49,8 @@ public abstract class AbstractDataSource implements Runnable{
     public void init(){
         logger.info("Start initializing the data source with the data source ID '{}'",this.id);
         logger.info("The data source configuration information is : \ninit input={},\nprocess={},\noutput={}",input,processes,outputs);
-        JSONObject object= JSONObject.fromObject(input);
-        inputObj= (AbstractInput) JsonUtil.readValue(input,InputClassType.getClass(object.getInt("type")));
+        AbstractInput object= JsonUtil.readValue(input,AbstractInput.class);
+        inputObj= (AbstractInput) JsonUtil.readValue(input,InputClassType.getClass(object.getType()));
         inputObj.init(this);
         if(StringUtils.isNotEmpty(this.processes)) {
             List<Map> processStrs = JsonUtil.readValue(this.processes, List.class);

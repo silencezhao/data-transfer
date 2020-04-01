@@ -1,7 +1,7 @@
 package com.datatransfer.api.transfer.enumer;
 
 import com.datatransfer.exceptions.base.ManuAppException;
-import com.datatransfer.plugins
+import com.datatransfer.plugins.input.*;
 
 /**
  * 输入类类型

@@ -1,7 +1,7 @@
 package com.datatransfer.api.transfer.enumer;
 
-import com.nsfocus.exception.ManuAppException;
-import com.nsfocus.output.HiveOutput;
+import com.datatransfer.exceptions.base.ManuAppException;
+import com.datatransfer.plugins.sink.*;
 
 /**
  * 输入类类型

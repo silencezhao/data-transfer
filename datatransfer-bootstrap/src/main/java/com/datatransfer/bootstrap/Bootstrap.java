@@ -1,9 +1,7 @@
 package com.datatransfer.bootstrap;
 
-import com.nsfocus.context.AppContext;
-import com.nsfocus.task.InitTaskFromConfig;
-import com.nsfocus.base.AbstractDataSource;
-import com.nsfocus.context.AppContext;
+import com.datatransfer.context.AppContext
+
 import com.nsfocus.datasource.BaseDateSource;
 import com.nsfocus.util.Constants;
 import com.nsfocus.util.FileUtil;
