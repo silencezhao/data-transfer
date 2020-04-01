@@ -1,6 +1,6 @@
 package com.datatransfer.executor;
 
-import com.datatransfer
+import com.datatransfer.utils.SafeProperties;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

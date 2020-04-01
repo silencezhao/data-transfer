@@ -3,9 +3,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>datatransfer</artifactId>
+        <artifactId>datatransfer-root</artifactId>
         <groupId>com.datatransfer</groupId>
         <version>1.0-SNAPSHOT</version>
+        <relativePath>../datatransfer-root/pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
@@ -22,40 +23,30 @@
     </properties>
 
     <dependencies>
-        <!--日志-->
         <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-        </dependency>
-        <!-- log4j1到slf4j的桥梁 -->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>log4j-over-slf4j</artifactId>
-        </dependency>
-        <!-- commons-log到slf4j的桥梁 -->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>jcl-over-slf4j</artifactId>
-        </dependency>
-        <!-- jdk-utils-log到slf4j的桥梁 -->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>jul-to-slf4j</artifactId>
+            <groupId>com.datatransfer</groupId>
+            <artifactId>datatransfer-common-exception</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-api</artifactId>
+            <groupId>com.datatransfer</groupId>
+            <artifactId>datatransfer-plugins-input</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-core</artifactId>
+            <groupId>com.datatransfer</groupId>
+            <artifactId>datatransfer-plugins-procecssor</artifactId>
         </dependency>
-        <!-- 桥接:告诉Slf4j使用Log4j2 -->
         <dependency>
-            <groupId>org.apache.logging.log4j</groupId>
-            <artifactId>log4j-slf4j-impl</artifactId>
+            <groupId>com.datatransfer</groupId>
+            <artifactId>datatransfer-plugins-sink</artifactId>
         </dependency>
-
+        <dependency>
+            <groupId>com.datatransfer</groupId>
+            <artifactId>datatransfer-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.datatransfer</groupId>
+            <artifactId>datatransfer-utils</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

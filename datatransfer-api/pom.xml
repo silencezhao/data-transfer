@@ -16,6 +16,21 @@
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.datatransfer</groupId>
+            <artifactId>datatransfer-common-exception</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.datatransfer</groupId>
+            <artifactId>datatransfer-common-enumer</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.datatransfer</groupId>
+            <artifactId>datatransfer-utils</artifactId>
+        </dependency>
+    </dependencies>
+
 
     <build>
         <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->

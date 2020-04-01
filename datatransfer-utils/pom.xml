@@ -23,7 +23,10 @@
     </properties>
 
     <dependencies>
-
+        <dependency>
+            <groupId>com.datatransfer</groupId>
+            <artifactId>datatransfer-common-exception</artifactId>
+        </dependency>
     </dependencies>
     <build>
         <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->

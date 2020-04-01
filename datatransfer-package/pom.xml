@@ -3,13 +3,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>datatransfer</artifactId>
+        <artifactId>datatransfer-root</artifactId>
         <groupId>com.datatransfer</groupId>
         <version>1.0-SNAPSHOT</version>
+        <relativePath>../datatransfer-root/pom.xml</relativePath>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>datatransfer-package</artifactId>
+    <version>1.0.0</version>
+    <packaging>pom</packaging>
 
     <name>datatransfer-package</name>
     <!-- FIXME change it to the project's website -->
@@ -23,42 +26,62 @@
 
     <dependencies>
         <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.11</version>
-            <scope>test</scope>
+            <groupId>com.datatransfer</groupId>
+            <artifactId>datatransfer-common-exception</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.datatransfer</groupId>
+            <artifactId>datatransfer-plugins-input</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.datatransfer</groupId>
+            <artifactId>datatransfer-plugins-procecssor</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.datatransfer</groupId>
+            <artifactId>datatransfer-plugins-sink</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.datatransfer</groupId>
+            <artifactId>datatransfer-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.datatransfer</groupId>
+            <artifactId>datatransfer-utils</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.datatransfer</groupId>
+            <artifactId>datatransfer-bootstrap</artifactId>
         </dependency>
     </dependencies>
 
     <build>
-        <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
-            <plugins>
-                <plugin>
-                    <artifactId>maven-assembly-plugin</artifactId>
-                    <configuration>
-                        <archive>
-                            <manifest>
-                                <mainClass>com.nsfocus.core.Boot</mainClass>
-                            </manifest>
-                        </archive>
-                        <descriptorRefs>
-                            <descriptorRef>
-                                jar-with-dependencies
-                            </descriptorRef>
-                        </descriptorRefs>
-                        <descriptor>src/main/assembly/assembly.xml</descriptor>
-                    </configuration>
-                    <executions>
-                        <execution>
-                            <id>make-assembly</id>
-                            <phase>package</phase>
-                            <goals>
-                                <goal>single</goal>
-                            </goals>
-                        </execution>
-                    </executions>
-                </plugin>
-            </plugins>
-        </pluginManagement>
+        <plugins>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>com.datatransfer.bootstrap.Bootstrap</mainClass>
+                        </manifest>
+                    </archive>
+                    <descriptorRefs>
+                        <descriptorRef>
+                            jar-with-dependencies
+                        </descriptorRef>
+                    </descriptorRefs>
+                    <descriptor>assembly/assembly.xml</descriptor>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>make-assembly</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
     </build>
 </project>

@@ -1,7 +1,6 @@
-package com.datatransfer.api.transfer.enumer;
+package com.datatransfer.enumer;
 
 import com.datatransfer.exceptions.base.ManuAppException;
-import com.datatransfer.plugins.processor.*;
 
 /**
  * 输入类类型
@@ -9,7 +8,7 @@ import com.datatransfer.plugins.processor.*;
  * date 2019/9/2 11:45
  */
 
-public enum ProcessClassType {
+public enum OutputClassType {
     /**
      *
      * *
@@ -17,26 +16,26 @@ public enum ProcessClassType {
 
 
     /**
-     * 扩展字段
+     * hive
      */
-    TRAN_TO_AVRO_DATA(1, TranToAvroData.class);
+    HIVE(1, OutputClassType.class);
 
 
     private int type;
     private Class classType;
 
-    private ProcessClassType(int type, Class classType) {
+    private OutputClassType(int type, Class classType) {
         this.type = type;
         this.classType = classType;
     }
 
     public static Class getClass(int type) {
-        for (ProcessClassType t : ProcessClassType.values()) {
+        for (OutputClassType t : OutputClassType.values()) {
             if (t.type == type) {
                 return t.classType;
             }
         }
-        throw new ManuAppException("Can't get the corresponding process type");
+        throw new ManuAppException("Can't get the corresponding output type");
     }
 
     public int getType() {

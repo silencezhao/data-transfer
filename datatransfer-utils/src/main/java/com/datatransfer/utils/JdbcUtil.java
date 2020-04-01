@@ -1,6 +1,5 @@
 package com.datatransfer.utils;
 
-import com.nsfocus.base.AbstractDataSource;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -127,38 +126,6 @@ public class JdbcUtil {
             }
         }catch (Exception ex){
             logger.error(errorMsg,ex);
-        }
-    }
-
-    /**
-     * 提交事务
-     * add by zhaoheng
-     */
-    public static void commit(Connection connection, AbstractDataSource dataSource){
-        try {
-            //提交事务
-            if(connection!=null){
-                connection.commit();
-                logger.info("submit transaction successfully, data source ID is {} ",dataSource.getId());
-            }
-        }catch (SQLException ex){
-            logger.error(ex.getMessage(),ex);
-        }
-    }
-
-    /**
-     * 回滚事务
-     * add by zhaoheng
-     */
-    public static void rollback(Connection connection,AbstractDataSource dataSource){
-        try{
-            //失败时回滚
-            if(connection!=null){
-                connection.rollback();
-                logger.info("rollback transaction success, data source id is {}",dataSource.getId());
-            }
-        }catch (SQLException e){
-            logger.error("rollback transaction fail,data source id is {}",dataSource.getId(),e);
         }
     }
 }

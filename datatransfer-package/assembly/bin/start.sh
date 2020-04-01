@@ -5,7 +5,7 @@
 
 
 
-JAVA_HOME=/opt/nsfocus/espc/deps/java
+JAVA_HOME=$JAVA_HOME
 cd `dirname $0`
 BIN_DIR=`pwd`
 cd ..
@@ -27,7 +27,7 @@ if [ -n "$PIDS" ]; then
     echo "PID: $PIDS"
     exit 1
 fi
-nohup $JAVA_HOME/bin/java -Xms1024m -Xmx3096m  -classpath $CONF_DIR:$LIB_DIR com.nsfocus.core.Boot 1>/dev/null 2>./start.err &
+nohup $JAVA_HOME/bin/java -Xms1024m -Xmx3096m  -classpath $CONF_DIR:$LIB_DIR com.datatransfer.bootstrap.Bootstrap 1>/dev/null 2>./start.err &
 
 echo -e "Starting the $SERVER_NAME ...\c"
 

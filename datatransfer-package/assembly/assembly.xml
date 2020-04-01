@@ -14,19 +14,20 @@
  - limitations under the License.
 -->
 <assembly>
-    <id>assembly</id>
+    <id>release</id>
+
     <formats>
         <format>tar.gz</format>
     </formats>
     <includeBaseDirectory>true</includeBaseDirectory>
     <fileSets>
         <fileSet>
-            <directory>src/main/assembly/bin</directory>
+            <directory>assembly/bin</directory>
             <outputDirectory>bin</outputDirectory>
             <fileMode>0755</fileMode>
         </fileSet>
         <fileSet>
-            <directory>src/main/assembly/conf</directory>
+            <directory>assembly/conf</directory>
             <outputDirectory>conf</outputDirectory>
             <fileMode>0644</fileMode>
         </fileSet>

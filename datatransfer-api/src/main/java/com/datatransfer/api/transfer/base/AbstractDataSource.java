@@ -1,8 +1,8 @@
 package com.datatransfer.api.transfer.base;
 
-import com.datatransfer.api.transfer.enumer.InputClassType;
-import com.datatransfer.api.transfer.enumer.OutputClassType;
-import com.datatransfer.api.transfer.enumer.ProcessClassType;
+import com.datatransfer.enumer.InputClassType;
+import com.datatransfer.enumer.OutputClassType;
+import com.datatransfer.enumer.ProcessClassType;
 import com.datatransfer.utils.JsonUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;

@@ -1,7 +1,6 @@
-package com.datatransfer.api.transfer.enumer;
+package com.datatransfer.enumer;
 
 import com.datatransfer.exceptions.base.ManuAppException;
-import com.datatransfer.plugins.input.*;
 
 /**
  * 输入类类型
@@ -9,7 +8,7 @@ import com.datatransfer.plugins.input.*;
  * date 2019/9/2 11:45
  */
 
-public enum  InputClassType {
+public enum ProcessClassType {
     /**
      *
      * *
@@ -17,26 +16,26 @@ public enum  InputClassType {
 
 
     /**
-     * oralce
+     * 扩展字段
      */
-    ORACLE(1, OracleInput.class);
+    TRAN_TO_AVRO_DATA(1, ProcessClassType.class);
 
 
     private int type;
     private Class classType;
 
-    private InputClassType(int type, Class classType) {
+    private ProcessClassType(int type, Class classType) {
         this.type = type;
         this.classType = classType;
     }
 
     public static Class getClass(int type) {
-        for (InputClassType t : InputClassType.values()) {
+        for (ProcessClassType t : ProcessClassType.values()) {
             if (t.type == type) {
                 return t.classType;
             }
         }
-        throw new ManuAppException("Can't get the corresponding input type");
+        throw new ManuAppException("Can't get the corresponding process type");
     }
 
     public int getType() {

@@ -1,9 +1,9 @@
 package com.datatransfer.context;
 
-import com.nsfocus.core.Boot;
-import com.nsfocus.executor.TaskExecutor;
-import com.nsfocus.util.Constants;
-import com.nsfocus.util.SafeProperties;
+import com.datatransfer.bootstrap.Bootstrap;
+import com.datatransfer.executor.TaskExecutor;
+import com.datatransfer.utils.Constants;
+import com.datatransfer.utils.SafeProperties;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -52,7 +52,7 @@ public class AppContext {
         logger.info("start read config,file path is {}", Constants.CONFIG_FILE);
         properties = new SafeProperties();
         try{
-            properties.load(Boot.class.getClassLoader().getResourceAsStream(Constants.CONFIG_FILE));
+            properties.load(Bootstrap.class.getClassLoader().getResourceAsStream(Constants.CONFIG_FILE));
         }catch (IOException ex){
             logger.error("read config fail",ex);
         }
