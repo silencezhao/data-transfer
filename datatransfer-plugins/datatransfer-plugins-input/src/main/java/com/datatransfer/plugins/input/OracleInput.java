@@ -2,6 +2,9 @@ package com.datatransfer.plugins.input;
 
 
 
+import com.datatransfer.api.transfer.base.AbstractDataSource;
+import com.datatransfer.api.transfer.base.AbstractInput;
+
 import java.io.File;
 import java.sql.*;
 import java.util.*;
@@ -14,7 +17,16 @@ import java.util.*;
  * update by zhaoheng,2019/9/10
  */
 
-public class OracleInput {
+public class OracleInput extends AbstractInput {
 
 
+    @Override
+    protected void execute(List<Map<String, Object>> data, AbstractDataSource dataSource) {
+
+    }
+
+    @Override
+    public Map<String, Object> init(AbstractDataSource dataSource) {
+        return null;
+    }
 }
