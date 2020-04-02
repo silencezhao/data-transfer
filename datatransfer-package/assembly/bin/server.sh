@@ -20,6 +20,6 @@ case "$1" in
         ./start_daemon.sh
         ;;
     *)
-        echo -e "usage: server.sh [stop|start|restart|start_daemon]\n\tstart\tstart data-transfer\n\tstop\tstop data-transfer\n\trestart\trestart data-transfer\n\tstart_daemon start supervisor monitor process"
+        echo -e "usage: server.sh [stop|start|restart|start_daemon]\n\tstart\tstart data-transfer\n\tstop\tstop data-transfer\n\trestart\trestart data-transfer\n\t"
         exit;
 esac
