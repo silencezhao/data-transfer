@@ -101,4 +101,8 @@ public class TaskExecutor {
     public void submitTask(Runnable task){
         threadPoolExecutor.submit(task);
     }
+
+    public void shutdown(){
+        threadPoolExecutor.shutdown();
+    }
 }

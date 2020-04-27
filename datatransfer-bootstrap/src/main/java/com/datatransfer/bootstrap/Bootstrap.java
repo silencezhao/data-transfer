@@ -29,6 +29,12 @@ public class Bootstrap {
         initTaskFromConfig.init();
         initTaskFromConfig.readCheckpoint();
         initTaskFromConfig.start();
+
+        Runtime.getRuntime().addShutdownHook(new Thread(){
+            public void run(){
+                initTaskFromConfig.shutdown();
+            }
+        });
     }
 
 
@@ -75,6 +81,11 @@ public class Bootstrap {
                 //提交任务至线程池
                 context.getTaskExecutor().submitTask(dataSource);
             }
+        }
+
+        public void shutdown(){
+            logger.error("sisisisisi");
+            context.getTaskExecutor().shutdown();
         }
 
         //恢复检查点
