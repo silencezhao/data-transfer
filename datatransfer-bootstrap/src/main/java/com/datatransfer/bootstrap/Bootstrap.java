@@ -84,7 +84,6 @@ public class Bootstrap {
         }
 
         public void shutdown(){
-            logger.error("sisisisisi");
             context.getTaskExecutor().shutdown();
         }
 
